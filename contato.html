@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px 25px 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 14pt;
+            color: #34495e;
+        }
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14pt;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            display: block;
+            padding: 10px 20px;
+            font-size: 16pt;
+            color: #fff;
+            background-color: #27ae60;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 20px auto 0;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #219150;
+        }
+        #status {
+            text-align: center;
+            font-size: 18pt;
+            color: #27ae60;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contato</h1>
+
+    <form id="contatoForm">
+        <label>Nome:
+            <input type="text" name="nome" required>
+        </label>
+        <label>E-mail:
+            <input type="email" name="email" required>
+        </label>
+        <label>Mensagem:
+            <textarea name="mensagem" rows="5" required></textarea>
+        </label>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p id="status" style="display:none;">Contato enviado com sucesso!</p>
+
+    <script>
+        document.getElementById('contatoForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Aqui poderia ser enviada uma requisição real.
+            this.style.display = 'none';
+            document.getElementById('status').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
