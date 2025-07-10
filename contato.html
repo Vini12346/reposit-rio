@@ -1,92 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Contato</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 30px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-        }
-        form {
-            max-width: 500px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 20px 25px 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-        label {
-            display: block;
-            margin-bottom: 15px;
-            font-size: 14pt;
-            color: #34495e;
-        }
-        input,
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 14pt;
-            box-sizing: border-box;
-        }
-        textarea {
-            resize: vertical;
-        }
-        button {
-            display: block;
-            padding: 10px 20px;
-            font-size: 16pt;
-            color: #fff;
-            background-color: #27ae60;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            margin: 20px auto 0;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #219150;
-        }
-        #status {
-            text-align: center;
-            font-size: 18pt;
-            color: #27ae60;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Contato - Turismo Caxias do Sul</title>
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+  <header>
     <h1>Contato</h1>
+    <nav>
+      <ul>
+        <li><a href="index.htm">Início</a></li>
+        <li><a href="historia.html">História</a></li>
+        <li><a href="locais.html">Locais Turísticos</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <form id="contatoForm">
-        <label>Nome:
-            <input type="text" name="nome" required>
-        </label>
-        <label>E-mail:
-            <input type="email" name="email" required>
-        </label>
-        <label>Mensagem:
-            <textarea name="mensagem" rows="5" required></textarea>
-        </label>
-        <button type="submit">Enviar</button>
+  <main>
+    <h2>Fale Conosco</h2>
+    <form action="#" method="post">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required><br>
+
+      <label for="fone">Telefone:</label>
+      <input type="tel" id="fone" name="fone"><br>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="mensagem">Mensagem:</label><br>
+      <textarea id="mensagem" name="mensagem" rows="5" cols="30"></textarea><br>
+
+      <input type="submit" value="Enviar">
     </form>
+  </main>
 
-    <p id="status" style="display:none;">Contato enviado com sucesso!</p>
-
-    <script>
-        document.getElementById('contatoForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            // Aqui poderia ser enviada uma requisição real.
-            this.style.display = 'none';
-            document.getElementById('status').style.display = 'block';
-        });
-    </script>
+  <footer>
+    <p>&copy; 2025 Turismo Caxias do Sul</p>
+  </footer>
 </body>
 </html>
